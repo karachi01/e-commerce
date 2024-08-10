@@ -5,6 +5,7 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   base: "/ecommerce/",
   plugins: [react()],
+  assetsInclude: ['**/*.JPG'],
   server: {
     host: '0.0.0.0',
   }

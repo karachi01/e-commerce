@@ -1,5 +1,12 @@
 import './App.css'
 import React from "react"
+import waterbottle from "./assets/waterbottle.JPG"
+import shoppingbag from "./assets/shopping-bag.png"
+import toothbrush from "./assets/toothbrush.JPG"
+import bamboobrush from "./assets/brush.JPG"
+import bowl from "./assets/bowl.JPG"
+
+
 
 /* this is the normal format for react, you have to use multiple function components*/
 
@@ -19,7 +26,7 @@ function Navbar() {
       <a href='#'>Home</a>
       <a href='#'>Shop Now</a>
       <a href='#'>About Us</a>
-      <a href='#'><img src='./src/assets/shopping-bag.png' alt='shopping-cart' className="icon-style"/></a>
+      <a href='#'><img src={shoppingbag} alt='shopping-cart' className="icon-style"/></a>
     </div>
       /*</div>*/
   )
@@ -36,7 +43,7 @@ function Heading() {
 function ProductImage() {
   return (
     <div className='picture'>
-      <img src='./src/assets/waterbottle.JPG' className="waterbottle" alt="Water Bottle"></img>
+      <img src={waterbottle} className="waterbottle" alt="Water Bottle"></img>
     </div>
   )
 }
@@ -89,19 +96,19 @@ function MoreInfo() {
 
       <div className='three-containers'>
         <div className='image-box'>
-          <img src='./src/assets/toothbrush.JPG' alt="bamboo toothbrush" />
+          <img src={toothbrush} alt="bamboo toothbrush" />
           <h4 className='image-title'>Bamboo Toothbrush</h4>
           <h4 className='image-title'>$18</h4>
         </div>
         
         <div className='image-box'>
-          <img src='./src/assets/brush.JPG' alt="brush" />
+          <img src={bamboobrush} alt="brush" />
           <h4 className='image-title'>Bamboo Brush</h4>
           <h4 className='image-title'>$24</h4>
         </div>
         
         <div className='image-box'>
-          <img src='./src/assets/bowl.JPG' alt="bowl" />
+          <img src={bowl} alt="bowl" />
           <h4 className='image-title'>Bamboo Plate</h4>
           <h4 className='image-title'>$16</h4>
         </div>
