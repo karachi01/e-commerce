@@ -1,17 +1,22 @@
-## Running React on Replit
+# E-commerce Website
+This project is a responsive e-commerce web application that showcases eco-friendly products. Built using HTML, CSS, and React, it provides a clean and modern user interface with smooth navigation and functional components.
 
-[React](https://reactjs.org/) is a popular JavaScript library for building user interfaces.
+## Features
+- Announcement Bar: Displays promotional messages.
+- Navigation Bar: Links to key sections of the site, including Home, Shop Now, and About Us.
+- Product Display: Showcases a featured eco-friendly bamboo water bottle, including images, descriptions, and pricing.
+- Interactive Buttons: "Add to Cart" and "Buy Now" buttons with hover effects for enhanced user experience.
+- Product Details: Includes a section for product description, shipping, and reviews.
+- Related Products: Suggests other eco-friendly products the user may like.
+- Footer: Contains links to company information, product categories, and social media.
 
-[Vite](https://vitejs.dev/) is a blazing fast frontend build tool that includes features like Hot Module Reloading (HMR), optimized builds, and TypeScript support out of the box.
-
-Using the two in conjunction is one of the fastest ways to build a web app.
-
-### Getting Started
-- Hit run
-- Edit [App.jsx](#src/App.jsx) and watch it live update!
-
-By default, Replit runs the `dev` script, but you can configure it by changing the `run` field in the [configuration file](#.replit). Here are the vite docs for [serving production websites](https://vitejs.dev/guide/build.html)
-
-### Typescript
-
-Just rename any file from `.jsx` to `.tsx`. You can also try our [TypeScript Template](https://replit.com/@replit/React-TypeScript)
+## Technologies Used
+- HTML5: Structure and content of the web pages.
+- CSS3: Styling and layout, including responsive design.
+- React: Component-based architecture for building UI elements.
+- JavaScript: Enhances interactivity and dynamic content.
+  
+## Project Structure
+- App.css: Contains all the custom styles for the project.
+- App.jsx: Main React component that organizes the structure of the webpage.
+- assets/: Directory for images used in the project, such as product images and icons.
