@@ -261,3 +261,25 @@ hr{
   margin-top: 20px;
   font-size: 0.9em;
 }
+
+
+/*this is for the cart count and count icon styling*/
+.cart-icon {
+  position: relative;
+  display: inline-block;
+}
+
+.cart-count {
+  position: absolute;
+  top: -10px; /* Adjust as needed */
+  right: -10px; /* Adjust as needed */
+  background-color: #144322;
+  color: white;
+  border-radius: 50%;
+  padding: 4px 8px; /* Adjust for size */
+  font-size: 12px; /* Adjust for size */
+  font-weight: bold;
+  line-height: 1;
+  min-width: 20px; /* Ensures circle shape */
+  text-align: center;
+}

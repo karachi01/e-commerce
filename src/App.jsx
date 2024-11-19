@@ -1,10 +1,10 @@
 import './App.css'
-import React from "react"
+import {useState} from "react"
 import waterbottle from "./assets/waterbottle.JPG"
-import shoppingbag from "./assets/shopping-bag.png"
 import toothbrush from "./assets/toothbrush.JPG"
 import bamboobrush from "./assets/brush.JPG"
 import bowl from "./assets/bowl.JPG"
+import Navbar from './NavBar';
 
 
 
@@ -20,17 +20,7 @@ function AnnouncementBar() {
 }
 
 
-function Navbar() {
-  return (
-    <div className='nav-bar'>
-      <a href='#'>Home</a>
-      <a href='#'>Shop Now</a>
-      <a href='#'>About Us</a>
-      <a href='#'><img src={shoppingbag} alt='shopping-cart' className="icon-style"/></a>
-    </div>
-      /*</div>*/
-  )
-}
+
 
 function Heading() {
   return (
@@ -48,13 +38,16 @@ function ProductImage() {
   )
 }
 
-function ProductInfo() {
+
+/* this part was also added to create an addToCart click function */
+function ProductInfo( {addToCart} ) {
   return (
     <div className='text-container'>
       <h2>Bamboo Waterbottle <span className="price">$29.99</span></h2>
 
       <div className='buttons-container'>
-        <button className='add-to-cart'>Add to Cart</button>
+        <button className='add-to-cart' onClick={addToCart}> Add to Cart</button>
+        
         <button className='buy-now'>Buy Now</button>
       </div>
 <hr></hr>
@@ -153,20 +146,28 @@ function Footer(){
 
 }
 
-
+/*this is the new added javascript part that is responsible for implementing the cartCount and increaasing it eery time it is pressed */
 export default function App() {
+
+  const [cartCount, setCartCount] = useState(0);
+
+  const handleAddToCart = () => {
+    setCartCount(cartCount + 1);
+  };
+
+  
   return (
-    <div>
-      <AnnouncementBar />
-      <Navbar />
-      <Heading />
-      <div className='container'>
-        <ProductImage />
-        <ProductInfo />
+      <div>
+        <AnnouncementBar />
+        <Navbar cartCount={cartCount} />
+        <Heading />
+        <div className='container'>
+          <ProductImage />
+          <ProductInfo addToCart={handleAddToCart} />
+        </div>
+        <hr className="full-width-hr" />
+        <MoreInfo />
+        <Footer />
       </div>
-      <hr className="full-width-hr" />
-      <MoreInfo />
-      <Footer />
-    </div>
-  )
-}
+    );
+  }
